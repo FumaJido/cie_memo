@@ -1,6 +1,6 @@
 # C#のTips集
 
-## swich文の特徴について
+## swich文とreturnの併用について
 ```swich```は基本的に以下の形で使用される。
 ```
 swich(式)
