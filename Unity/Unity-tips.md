@@ -20,6 +20,30 @@
 (補足)  
 ```Min Value``` ```Max Value```を変更することでスライダーの最小値と最大値を変更できる
 
+## UI/Sliderを動かしたときにリアルタイムで更新する方法
+```OnValueChanged.AddLisner()```を使う
+```
+using UnityEngine;
+using UnityEngine.UI;
+
+public class SliderExample : MonoBehaviour
+{
+    public Slider mySlider;
+    public Text valueText; // スライダーの値を表示するテキスト
+
+    void Start()
+    {
+        mySlider.onValueChanged.AddListener(UpdateText); // イベント登録
+        UpdateText(mySlider.value); // 初期値を表示
+    }
+
+    void UpdateText(float value)
+    {
+        valueText.text = "値: " + value.ToString("F1");
+    }
+}
+```
+
 ## UI/InputField(TMP版)で入力した文字列をスクリプトで取得する方法
 宣言した```TMP_InputField```オブジェクトから```.text```で取り出す
 ```
@@ -31,6 +55,9 @@ void Start()
   Debug.Log("入力されたテキスト：" + strInput);
 }
 ```
+
+## UIのボタンやドロップダウンが反応しない場合
+テキストラベルがUIにかぶっている場合が多い
 
 ## コルーチンの使い方
 以下を参照
