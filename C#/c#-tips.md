@@ -49,3 +49,14 @@ Console.WriteLine($"[{str2}]");
 [　　オブジェクト指向　　]
 [オブジェクト指向]
 ```
+
+## 配列の扱いについて
+### 要素が配列の何番目かを取得する
+```Array.IndexOf(array, input)```
+```
+static int GetIndex(string input, string[] array)
+{
+return Array.IndexOf(array, input);
+}
+
+```
