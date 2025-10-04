@@ -58,5 +58,8 @@ static int GetIndex(string input, string[] array)
 {
 return Array.IndexOf(array, input);
 }
+###（例）
+string[] letters = {"a", "b", "c"};
+GetIndex("a", letters); // 出力0
 
 ```
